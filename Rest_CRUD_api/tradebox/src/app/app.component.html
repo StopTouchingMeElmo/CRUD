@@ -1,0 +1,142 @@
+<header>
+  <mat-toolbar color="primary">
+
+    <!-- Верхний тулбар -->
+    <mat-toolbar-row class="top_row_one">
+
+      <div>
+        <a routerLink="home" routerLinkActive="active" ><mat-icon>monetization_on</mat-icon> Trade Box v.2.0</a>
+      </div>
+
+    </mat-toolbar-row>
+
+    <!-- Средний тулбар -->
+    <mat-toolbar-row>
+      <span></span>
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user
+      </mat-icon>
+    </mat-toolbar-row>
+
+    <!-- Нижний тулбар -->
+    <mat-toolbar-row class="top_row_third">
+
+      <div>
+        <button mat-button [matMenuTriggerFor]="menu_cats">Cats</button>
+        <mat-menu #menu_cats="matMenu">
+          <button mat-menu-item>Длинношерстные</button>
+          <button mat-menu-item>Короткошерстные</button>
+          <button mat-menu-item>Лысые</button>
+        </mat-menu>
+      </div>
+
+      <div>
+        <button mat-button [matMenuTriggerFor]="menu_dogs">Dogs</button>
+        <mat-menu #menu_dogs="matMenu">
+          <button mat-menu-item>Большие</button>
+          <button mat-menu-item>Средние</button>
+          <button mat-menu-item>Диванные</button>
+        </mat-menu>
+      </div>
+
+      <div>
+        <button mat-button [matMenuTriggerFor]="menu_birds">Birds</button>
+        <mat-menu #menu_birds="matMenu">
+          <button mat-menu-item>Поющие</button>
+          <button mat-menu-item>Говорящие</button>
+          <button mat-menu-item>Орущие</button>
+        </mat-menu>
+      </div>
+
+      <div>
+        <a mat-button routerLink="catalogue" routerLinkActive="active">Catalogue</a>
+      </div>
+
+      <div>
+        <a mat-button routerLink="creation" routerLinkActive="active">Sell</a>
+      </div>
+
+      <!-- Выпадающая менюшка в виде значка -->
+      <!--  <mat-menu #appMenu="matMenu">
+        <button mat-menu-item>Settings</button>
+        <button mat-menu-item>Help</button>
+      </mat-menu>
+
+      <button mat-icon-button [matMenuTriggerFor]="appMenu">
+        <mat-icon>more_vert</mat-icon>
+      </button> -->
+
+      <!--  <span class="example-spacer"></span> -->
+
+      <!-- Значки сердечко и мусорная корзина -->
+      <!--  <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon> -->
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+</header>
+
+<mat-drawer-container class="example-container">
+  <mat-drawer class="side-menu" mode="side" opened>
+    <div>
+      <a mat-button routerLink=".">Cats</a>
+    </div>
+
+    <div>
+      <a mat-button routerLink=".">Dogs</a>
+    </div>
+
+    <div>
+      <a mat-button routerLink=".">Birds</a>
+    </div>
+
+    <div>
+      <a mat-button routerLink="catalogue" routerLinkActive="active">Catalogue</a>
+    </div>
+
+    <div>
+      <a mat-button routerLink="creation" routerLinkActive="active">Sell</a>
+    </div>
+  </mat-drawer>
+
+  <mat-drawer-content>
+
+   
+
+    <!-- <div id="main1">
+      <div class="cats">
+        <div>Cats</div>
+        <div class="items">
+          <div>item1</div>
+          <div>item2</div>
+          <div>item3</div>
+          <div>item4</div>
+        </div>
+      </div>
+
+      <div class="dogs">Dogs</div>
+      <div class="Birds">Birds</div>
+    </div> -->
+
+    <router-outlet></router-outlet>
+
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<!-- <mat-sidenav-container class="example-container" *ngIf="shouldRun">
+  <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
+  <mat-sidenav-content>Main content</mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<footer>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row class="top_row_one">
+      <span>© 2019. TradeBox demo version.</span>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="top_row_one">
+      <div>
+        <a mat-button routerLink="/" routerLinkActive="active">Trade Box v.2.0</a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</footer>
