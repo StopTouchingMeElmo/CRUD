@@ -35,7 +35,7 @@ const httpOptions = {
 
   editItem(item) {
     let editItem = new EditItemModel(item.name, item.price, item.brand, item.created_date, item.desc, item.type); 
-    return this.httpClient.put<ItemModel>(`animals/${item.id}`, editItem);
+    return this.httpClient.put<ItemModel>(`animals/${item._id}`, editItem);
   }
 
 }

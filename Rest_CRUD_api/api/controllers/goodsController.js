@@ -46,7 +46,7 @@ exports.read_a_pieceOfClothing = function (req, res) {
 
 exports.update_a_pieceOfClothing = function (req, res) {
   PieceOfClothing.findOneAndUpdate(
-    req.params.id,
+    {_id: req.params.id},
     req.body, function (err, task) {
     if (err)
       res.send(err);
