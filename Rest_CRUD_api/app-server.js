@@ -68,6 +68,6 @@ app.all('/*', function (req, res) {
 
 const server = http.Server(app);
 /* server.listen(4200); */
-app.listen(4200);
+app.listen(8080);
 
-console.log('RESTful API server started on: ' + 4200);
+console.log('RESTful API server started on: ' + 8080);

@@ -1,11 +1,11 @@
 <header>
-  <mat-toolbar color="primary">
+  <mat-toolbar [ngStyle]="{'background-color': 'blueviolet'}">
 
     <!-- Верхний тулбар -->
     <mat-toolbar-row class="top_row_one">
 
       <div>
-        <a routerLink="home" routerLinkActive="active" ><mat-icon>monetization_on</mat-icon> Trade Box v.2.0</a>
+        <a routerLink="home" routerLinkActive="active" ><!-- <mat-icon>monetization_on</mat-icon> --><font color='lightseagreen'>CRUD RESTful API</font></a>
       </div>
 
     </mat-toolbar-row>
@@ -49,11 +49,11 @@
       </div>
 
       <div>
-        <a mat-button routerLink="catalogue" routerLinkActive="active">Catalogue</a>
+        <a mat-button routerLink="catalogue" routerLinkActive="active"> <font color='lightseagreen'>Previews</font></a>
       </div>
 
       <div>
-        <a mat-button routerLink="creation" routerLinkActive="active">Sell</a>
+        <a mat-button routerLink="creation" routerLinkActive="active"><font color='lightseagreen'>Create a Profile</font></a>
       </div>
 
       <!-- Выпадающая менюшка в виде значка -->
@@ -129,13 +129,13 @@
 </mat-sidenav-container> -->
 
 <footer>
-  <mat-toolbar color="primary">
+  <mat-toolbar [ngStyle]="{'background-color': 'blueviolet'}">
     <mat-toolbar-row class="top_row_one">
-      <span>© 2019. TradeBox demo version.</span>
+      <span> <font color='lightseagreen'>© 2019. CRUD demo version.</font></span>
     </mat-toolbar-row>
     <mat-toolbar-row class="top_row_one">
       <div>
-        <a mat-button routerLink="/" routerLinkActive="active">Trade Box v.2.0</a>
+        <a mat-button routerLink="/" routerLinkActive="active">CRUD RESTful API</a>
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
